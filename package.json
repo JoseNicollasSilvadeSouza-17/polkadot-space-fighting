@@ -1,0 +1,38 @@
+{
+  "name": "polkadot-space-fighting",
+  "version": "1.0.0",
+  "description": "Fighting in game is project of Polkadot Solidity Hackathon 2026.",
+  "main": "backend/server.ts",
+  "scripts": {
+    "start": "node --watch backend/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "polkadot",
+    "solidity",
+    "fighting-game",
+    "space",
+    "web3",
+    "pixel-art",
+    "2d"
+  ],
+  "author": {
+    "name": "José Nícollas Silva de Souza",
+    "email": "josenicollassilvadesouza@gmail.com"
+  },
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoseNicollasSilvadeSouza-17/polkadot-space-fighting"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.55.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.5.0",
+    "typescript": "^5.9.3"
+  }
+}

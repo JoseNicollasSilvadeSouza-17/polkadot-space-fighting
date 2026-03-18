@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Polkadot Space Fighting</title>
+        <meta name="color-scheme" content="light dark" />
+        <link href="./asset/css/style.css" rel="stylesheet" />
+        <meta name="description" content="Polkadot Space Fighting is a fighting game for the Polkadot Solidity Hackathon 2026." />
+    </head>
+    <body>
+        <noscript class="no-js" role="alert">
+            <h2 class="no-js__title">JavaScript Desativado</h2>
+
+            <p class="no-js__p">
+                O jogo <strong class="no-js__strong">Polkadot Space Fighting</strong> precisa de JavaScript para funcionar. Por favor, ative-o nas configurações do seu navegador para jogar.
+            </p>
+        </noscript>
+
+        <header class="header">
+            <h1 class="header__title">
+                Polkadot Space Fighting
+            </h1>
+        </header>
+
+        <main class="game">
+            <section class="game__screen">
+                <header class="game__header">
+                    <meter 
+                    class="game__health" id="playerHealth"
+                    min="0" 
+                    max="100" 
+                    low="30" 
+                    high="80" 
+                    optimum="100" 
+                    value="100"
+                    ></meter>
+
+                    <div class="game__hub">
+                        <time 
+                        class="game__timer"
+                        datetime="PT60S"
+                        role="timer"
+                        aria-live="polite"
+                        aria-label="Tempo restante"
+                        >60</time>
+                    </div>
+
+                    <meter 
+                    class="game__health" id="enemyrHealth"
+                    min="0" 
+                    max="100" 
+                    low="30" 
+                    high="80" 
+                    optimum="100" 
+                    value="100"
+                    ></meter>
+                </header>
+
+                <canvas class="game__canvas" id="gameCanvas">
+                    Desculpe-me, seu navegador não suporta a tag &lt;canvas&gt;
+                </canvas>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <small class="footer__copyright">
+                &copy; José Nícollas Silva de Souza - Todos os direitos reservados.
+            </small>
+        </footer>
+
+        <script src="./asset/js/script.js" type="module"></script>
+    </body>
+</html>

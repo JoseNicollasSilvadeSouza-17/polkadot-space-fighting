@@ -1,0 +1,43 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+html,
+body {
+    max-width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-size: 100%;
+    font-family: var(--font);
+}
+
+body {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5;
+    hyphens: auto;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+button,
+input {
+    font-size: inherit;
+}
+
+time {
+    font-variant-numeric: slashed-zero;
+}
