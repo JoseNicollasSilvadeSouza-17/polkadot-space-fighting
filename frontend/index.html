@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Polkadot Space Fighting</title>
         <meta name="color-scheme" content="light dark" />
-        <link href="./asset/css/style.css" rel="stylesheet" />
+        <link href="./assets/css/style.css" rel="stylesheet" />
         <meta name="description" content="Polkadot Space Fighting is a fighting game for the Polkadot Solidity Hackathon 2026." />
     </head>
     <body>
@@ -27,7 +27,8 @@
             <section class="game__screen">
                 <header class="game__header">
                     <meter 
-                    class="game__health" id="playerHealth"
+                    class="game__health" 
+                    id="playerHealth"
                     min="0" 
                     max="100" 
                     low="30" 
@@ -39,6 +40,7 @@
                     <div class="game__hub">
                         <time 
                         class="game__timer"
+                        id="timer"
                         datetime="PT60S"
                         role="timer"
                         aria-live="polite"
@@ -47,7 +49,8 @@
                     </div>
 
                     <meter 
-                    class="game__health" id="enemyrHealth"
+                    class="game__health" 
+                    id="enemyHealth"
                     min="0" 
                     max="100" 
                     low="30" 
@@ -60,6 +63,64 @@
                 <canvas class="game__canvas" id="gameCanvas">
                     Desculpe-me, seu navegador não suporta a tag &lt;canvas&gt;
                 </canvas>
+
+                <footer class="game__footer">
+                    <menu class="game__menu">
+                        <li class="game__item">
+                            Attack:
+
+                            <kbd class="game__kbd">
+                                Z 
+                            </kbd>
+
+                            /
+
+                            <kbd class="game__kbd">
+                                1 
+                            </kbd>
+                        </li>
+                    </menu>
+
+                    <menu class="game__menu">
+                        <li class="game__item">
+                            Move:
+
+                            <kbd class="game__kbd">
+                                W    
+                            </kbd>
+                            
+                            <kbd class="game__kbd">
+                                A
+                            </kbd>
+
+                            <kbd class="game__kbd">
+                                S
+                            </kbd>
+
+                            <kbd class="game__kbd">
+                                D
+                            </kbd>
+
+                            /
+
+                            <kbd class="game__kbd">
+                                ↑   
+                            </kbd>
+                            
+                            <kbd class="game__kbd">
+                                ←
+                            </kbd>
+
+                            <kbd class="game__kbd">
+                                ↓
+                            </kbd>
+
+                            <kbd class="game__kbd">
+                                →
+                            </kbd>
+                        </li>
+                    </menu>
+                </footer>
             </section>
         </main>
         
@@ -69,6 +130,6 @@
             </small>
         </footer>
 
-        <script src="./asset/js/script.js" type="module"></script>
+        <script src="./assets/js/script.js" type="module"></script>
     </body>
 </html>
