@@ -1,5 +1,8 @@
 import { timer, timerNumber, setTimerNumber, setTimerId, gravity, setGravity } from "./config.js";
+import player from "../characters/player.js";
+import enemy from "../characters/enemy.js";
 import randomGravity from "./randomGravity.js";
+import enemyMoveset from "./enemyMoveset.js";
 
 export default function decreaseTimer() {
     if(timerNumber > 0) {
@@ -9,5 +12,8 @@ export default function decreaseTimer() {
     }
 
     setGravity(randomGravity(gravity));
-    console.log(gravity);
+
+    if((timerNumber * 10) % 2 === 0) {
+        enemyMoveset(enemy, player);
+    }
 }

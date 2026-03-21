@@ -5,6 +5,7 @@ import player from "./characters/player.js";
 import enemy from "./characters/enemy.js";
 import keyboard from "./controls/keyboard.js";
 import decreaseTimer from "./utils/timer.js";
+import enemyMoveset from "./utils/enemyMoveset.js";
 
 let sleep = 0;
 
