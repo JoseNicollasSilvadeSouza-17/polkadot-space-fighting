@@ -41,3 +41,7 @@ input {
 time {
     font-variant-numeric: slashed-zero;
 }
+
+li {
+    list-style: none;
+}

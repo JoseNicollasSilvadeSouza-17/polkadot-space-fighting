@@ -1,0 +1,7 @@
+@media screen {
+    @media (min-width: 48rem) {
+        .game__footer {
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+.game__screen {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    margin: auto;
+}

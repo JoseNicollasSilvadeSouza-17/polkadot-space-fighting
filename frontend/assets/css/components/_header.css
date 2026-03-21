@@ -1,0 +1,10 @@
+.game__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    margin: auto;
+    padding: 0.2rem 0.5rem;
+    max-width: 64rem;
+    width: 100%;
+}

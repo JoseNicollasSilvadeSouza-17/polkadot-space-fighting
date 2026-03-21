@@ -2,3 +2,6 @@
 
 @import url("./abstract/_global.css");
 @import url("./base/_global.css");
+@import url("./layout/_global.css");
+@import url("./components/_global.css");
+@import url("./media/_global.css");

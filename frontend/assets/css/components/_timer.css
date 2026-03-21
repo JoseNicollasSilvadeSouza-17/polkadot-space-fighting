@@ -1,0 +1,10 @@
+.game__hub {
+    padding: 0.5rem;
+}
+
+.game__timer {
+    color: var(--color-polkadot);
+    letter-spacing: 0.05rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+}

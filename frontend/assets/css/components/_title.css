@@ -1,0 +1,8 @@
+.header__title {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.header__polkadot {
+    color: var(--color-polkadot);
+}

@@ -1,0 +1,5 @@
+.game__canvas {
+    border: 0.3rem solid var(--color-polkadot);
+    max-width: 100%;
+    min-width: 20rem;
+}

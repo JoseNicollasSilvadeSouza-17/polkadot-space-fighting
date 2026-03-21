@@ -1,0 +1,19 @@
+.game__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0 0;
+}
+
+.game__kbd {
+    border: 0.12rem solid light-dark(#121212, #fff);
+    border-radius: 0.3rem;
+    padding: 0 1rem;
+    background: light-dark(#fff, #121212);
+    box-shadow: 
+        rgba(67, 71, 85, 0.27) 0 0 0.25rem, 
+        rgba(90, 125, 188, 0.05) 0 0.25rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
