@@ -1,11 +1,10 @@
-import { canvas, playerHealth, enemyHealth,context, WIDTH, HEIGHT, keys, FONT, gravity, lastKey, isFinish, setIsFinish, timerNumber, timerId } from "./utils/config.js";
+import { canvas, playerHealth, enemyHealth,context, WIDTH, HEIGHT, keys, FONT, lastKey, isFinish, setIsFinish, timerNumber, timerId } from "./utils/config.js";
 import planet from "./background/planet.js";
 import background from "./background/background.js";
 import player from "./characters/player.js";
 import enemy from "./characters/enemy.js";
 import keyboard from "./controls/keyboard.js";
 import decreaseTimer from "./utils/timer.js";
-import enemyMoveset from "./utils/enemyMoveset.js";
 
 let sleep = 0;
 
@@ -39,7 +38,7 @@ function resultGame(playerHealth, enemyHealth, timer) {
     context.clearRect(0, 0, WIDTH, HEIGHT);
     window.cancelAnimationFrame(animate);
 
-    context.font = (`700 7rem ${FONT}`);
+    context.font = (`700 8rem ${FONT}`);
     context.textAlign = "center";
     context.textBaseline = "middle";
 
@@ -64,11 +63,11 @@ function animate() {
 
     context.fillStyle = "#000";
     context.fillRect(0, 0, WIDTH, HEIGHT);
-    background.draw(context);
-    planet.draw(context);
+    background.draw();
+    planet.draw();
 
-    player.update(context, HEIGHT, gravity);
-    enemy.update(context, HEIGHT, gravity);
+    player.update();
+    enemy.update();
 
     player.velocity.x = 0;
     player.switchSprites("idle");
@@ -122,8 +121,8 @@ canvas.height = HEIGHT;
 
 context.fillRect(0, 0, canvas.width, canvas.height);
 
-player.draw(context);
-enemy.draw(context);
+player.draw();
+enemy.draw();
 
 decreaseTimer();
 animate();

@@ -1,3 +1,5 @@
+import { context } from "../utils/config.js";
+
 export default class Map {
     constructor({
         position,
@@ -8,7 +10,7 @@ export default class Map {
         this.image.src = imageSrc
     }
 
-    draw(context) {
+    draw() {
         context.drawImage(
             this.image,
             this.position.x,

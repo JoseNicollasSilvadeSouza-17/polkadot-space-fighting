@@ -1,4 +1,4 @@
-import { HEIGHT } from "../utils/config.js";
+import { context, HEIGHT, gravity } from "../utils/config.js";
 import Map from "./Map.js";
 
 export default class Fighter extends Map {
@@ -50,7 +50,7 @@ export default class Fighter extends Map {
         }
     }
 
-    draw(context) {
+    draw() {
         context.fillStyle = "#ff2670";
 
         context.drawImage(
@@ -88,8 +88,8 @@ export default class Fighter extends Map {
         }
     }
 
-    update(context, HEIGHT, gravity) {
-        this.draw(context);
+    update() {
+        this.draw();
 
         this.animateFrame();
 
