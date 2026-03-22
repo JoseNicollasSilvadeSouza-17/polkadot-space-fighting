@@ -28,7 +28,8 @@
   },
   "dependencies": {
     "@dotenvx/dotenvx": "^1.55.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "three": "^0.183.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",

@@ -1,10 +1,11 @@
-import { canvas, playerHealth, enemyHealth,context, WIDTH, HEIGHT, keys, FONT, lastKey, isFinish, setIsFinish, timerNumber, timerId } from "./utils/config.js";
+import { canvas, backgroundSpace, playerHealth, enemyHealth,context, WIDTH, HEIGHT, keys, FONT, lastKey, isFinish, setIsFinish, timerNumber, timerId } from "./utils/config.js";
 import planet from "./background/planet.js";
 import background from "./background/background.js";
 import player from "./characters/player.js";
 import enemy from "./characters/enemy.js";
 import keyboard from "./controls/keyboard.js";
 import decreaseTimer from "./utils/timer.js";
+import { init, updateStars, scene, camera, renderer } from "./3d/three.js";
 
 let sleep = 0;
 
@@ -24,11 +25,11 @@ function resultGame(playerHealth, enemyHealth, timer) {
 
     if(!isFinish) {
         setIsFinish(true);
-        sleep = Date.now();
+        sleep = performance.now();
         return;
     }
 
-    const elapsed = Date.now() - sleep;
+    const elapsed = performance.now() - sleep;
 
     if(elapsed < 2000) {
         return;
@@ -58,30 +59,35 @@ function resultGame(playerHealth, enemyHealth, timer) {
     }
 }
 
+
 function animate() {
     window.requestAnimationFrame(animate);
-
+    
     context.fillStyle = "#000";
     context.fillRect(0, 0, WIDTH, HEIGHT);
     background.draw();
+    
+    updateStars();
+    renderer.render(scene, camera);
+    
     planet.draw();
-
+    
     player.update();
     enemy.update();
-
+    
     player.velocity.x = 0;
     player.switchSprites("idle");
-
+    
     if(keys.left.pressed && lastKey === "left") {
         player.velocity.x = -5;
         player.switchSprites("walk");
     }
-
+    
     if(keys.right.pressed && lastKey === "right") {
         player.velocity.x = 5;
         player.switchSprites("walk");
     }
-
+    
     if(rectangularCollision({
         rectangleOne: player,
         rectangleTwo: enemy
@@ -97,27 +103,30 @@ function animate() {
         rectangleTwo: player
     }) && enemy.isAttacking) {
         enemy.isAttacking = false;
-
+        
         player.health -= 10;
         console.log("Enemy attack successful!");
     }
-
+    
     playerHealth.value = player.health;
     enemyHealth.value = enemy.health;
 
     if(playerHealth.value <= 0) {
         player.switchSprites("dead");
     }
-
+    
     if(enemyHealth.value <= 0) {
         enemy.switchSprites("dead");
     }
-
+    
     resultGame(player.health, enemy.health, timerNumber);
 }
 
 canvas.width = WIDTH;
 canvas.height = HEIGHT;
+
+backgroundSpace.width = WIDTH;
+backgroundSpace.height = HEIGHT;
 
 context.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -125,6 +134,7 @@ player.draw();
 enemy.draw();
 
 decreaseTimer();
+init(backgroundSpace);
 animate();
 
 keyboard();
