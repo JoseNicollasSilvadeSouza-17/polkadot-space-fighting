@@ -8,6 +8,7 @@ const __dirname: string = import.meta.dirname;
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "../frontend")));
+app.use("/build/", express.static(path.join(__dirname, "../node_modules/three/build")));
 
 app.get("/", (req: Request, res: Response) => {
     res.sendFile(path.resolve(__dirname, "../frontend/index.html"));

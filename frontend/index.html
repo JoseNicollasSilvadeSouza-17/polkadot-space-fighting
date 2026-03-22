@@ -60,9 +60,15 @@
                     ></meter>
                 </header>
 
-                <canvas class="game__canvas" id="gameCanvas">
-                    Desculpe-me, seu navegador não suporta a tag &lt;canvas&gt;
-                </canvas>
+                <div class="game__viewport">
+                    <canvas class="game__canvas game__canvas--fg" id="gameCanvas">
+                        Desculpe-me, seu navegador não suporta a tag &lt;canvas&gt; (motor do jogo).
+                    </canvas>
+
+                    <canvas class="game__canvas game__canvas--bg" id="backgroundSpace">
+                        Desculpe-me, seu navegador não suporta a tag &lt;canvas&gt; (gráfico do fundo).
+                    </canvas>
+                </div>
 
                 <footer class="game__footer">
                     <menu class="game__menu">

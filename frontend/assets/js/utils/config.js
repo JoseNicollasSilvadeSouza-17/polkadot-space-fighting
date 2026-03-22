@@ -1,4 +1,5 @@
 const canvas = document.querySelector("#gameCanvas");
+const backgroundSpace = document.querySelector("#backgroundSpace");
 const playerHealth = document.querySelector("#playerHealth");
 const enemyHealth = document.querySelector("#enemyHealth");
 
@@ -51,6 +52,7 @@ function setIsFinish(newIsFinish) {
 
 export {
     canvas,
+    backgroundSpace,
     playerHealth,
     enemyHealth,
     timer,
