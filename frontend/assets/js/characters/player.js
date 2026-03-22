@@ -1,4 +1,7 @@
 import Fighter from "../class/Fighter.js";
+import randomWerewolf from "../utils/randomWerewolf.js";
+
+const werewolfSkin = randomWerewolf();
 
 const player = new Fighter({
     position: {
@@ -13,7 +16,7 @@ const player = new Fighter({
         x: 0,
         y: 0
     },
-    imageSrc: "./assets/images/characters/werewolf/idle.png",
+    imageSrc: `./assets/images/characters/werewolves/${werewolfSkin}/idle.png`,
     framesMax: 8,
     scale: 1.5,
     offsetPosition: {
@@ -22,23 +25,23 @@ const player = new Fighter({
     },
     sprites: {
         idle: {
-            imageSrc: "./assets/images/characters/werewolf/idle.png",
+            imageSrc: `./assets/images/characters/werewolves/${werewolfSkin}/idle.png`,
             framesMax: 8
         },
         walk: {
-            imageSrc: "./assets/images/characters/werewolf/walk.png",
+            imageSrc: `./assets/images/characters/werewolves/${werewolfSkin}/walk.png`,
             framesMax: 11
         },
         dead: {
-            imageSrc: "./assets/images/characters/werewolf/dead.png",
+            imageSrc: `./assets/images/characters/werewolves/${werewolfSkin}/dead.png`,
             framesMax: 2
         },
         attack: {
-            imageSrc: "./assets/images/characters/werewolf/attack.png",
+            imageSrc: `./assets/images/characters/werewolves/${werewolfSkin}/attack.png`,
             framesMax: 6
         },
         jump: {
-            imageSrc: "./assets/images/characters/werewolf/jump.png",
+            imageSrc: `./assets/images/characters/werewolves/${werewolfSkin}/jump.png`,
             framesMax: 11
         }
     }
