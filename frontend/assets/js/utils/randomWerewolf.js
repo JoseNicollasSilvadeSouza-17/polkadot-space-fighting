@@ -1,5 +1,5 @@
 export default function randomWerewolf() {
-    const max = 3;
+    const max = 5;
     const min = 1;
 
     let random = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -13,7 +13,15 @@ export default function randomWerewolf() {
             return "white";
         }
 
-        case 3: default: {
+        case 3: {
+            return "brown";
+        }
+
+        case 4: {
+            return "incandescent";
+        }
+
+        case 5: default: {
             return "black";
         }
     }
